@@ -13,7 +13,7 @@ module.exports = {
 
   userdata: null,
 
-  getData: function(key) {
+  get: function(key) {
     var userdata = this.userdata;
 
     if (!userdata) {
@@ -36,7 +36,7 @@ module.exports = {
    * 设置或清除 userdata
    * @param {object} userdata userdata值
    */
-  setData: function(userdata) {
+  set: function(userdata) {
     this.userdata = userdata;
 
     if (userdata === null) {
