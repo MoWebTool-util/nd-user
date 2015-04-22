@@ -13,7 +13,7 @@ module.exports = {
 
   userdata: null,
 
-  get: function(key) {
+  get: function() {
     var userdata = this.userdata;
 
     if (!userdata) {
@@ -25,8 +25,13 @@ module.exports = {
       }
     }
 
-    if (key && userdata) {
-      return userdata[key];
+    if (userdata) {
+      var args = Array.prototype.slice.call(arguments);
+      var key;
+
+      while ((key = args.shift()) && userdata) {
+        userdata = userdata[key];
+      }
     }
 
     return userdata;
