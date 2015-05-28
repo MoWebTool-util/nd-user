@@ -1,11 +1,14 @@
 /**
- * @module: nd-user
- * @author: crossjs <liwenfu@crossjs.com> - 2015-04-17 11:39:53
+ * @module User
+ * @author crossjs <liwenfu@crossjs.com>
+ * @create 2015-04-17 11:39:53
  */
 
 'use strict';
 
 var Storage = require('nd-storage');
+
+var storage = new Storage();
 
 module.exports = {
 
@@ -18,10 +21,10 @@ module.exports = {
 
     if (!userdata) {
       // 本地存储
-      userdata = Storage.get(this.tokenKey);
+      userdata = storage.get(this.tokenKey);
 
       if (userdata) {
-        userdata = this.userdata = JSON.parse(userdata);
+        this.userdata = userdata;
       }
     }
 
@@ -45,9 +48,9 @@ module.exports = {
     this.userdata = userdata;
 
     if (userdata === null) {
-      Storage.remove(this.tokenKey);
+      storage.remove(this.tokenKey);
     } else {
-      Storage.set(this.tokenKey, JSON.stringify(userdata));
+      storage.set(this.tokenKey, userdata);
     }
   }
 
