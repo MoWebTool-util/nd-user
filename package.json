@@ -1,25 +1,27 @@
 {
-  "name": "nd-debug",
+  "name": "nd-user",
   "version": "1.0.0",
-  "description": "debug, console wrapped",
+  "description": "User Data Stroage",
   "keywords": [],
-  "homepage": "https://github.com/ndfront/nd-debug",
+  "homepage": "https://github.com/ndfront/nd-user",
   "author": {
     "name": "crossjs",
     "email": "liwenfu@crossjs.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ndfront/nd-debug.git"
+    "url": "https://github.com/ndfront/nd-user.git"
   },
   "bugs": {
-    "url": "https://github.com/ndfront/nd-debug/issues"
+    "url": "https://github.com/ndfront/nd-user/issues"
   },
   "licenses": "MIT",
   "devDependencies": {},
   "spm": {
     "main": "index.js",
-    "dependencies": {},
+    "dependencies": {
+      "nd-storage": "1.0.0"
+    },
     "devDependencies": {
       "expect.js": "0.3.1"
     }

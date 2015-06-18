@@ -1,18 +1,18 @@
-# nd-debug
+# nd-user
 
-[![spm version](http://spm.crossjs.com/badge/nd-debug)](http://spm.crossjs.com/package/nd-debug)
+[![spm version](http://spm.crossjs.com/badge/nd-user)](http://spm.crossjs.com/package/nd-user)
 
-> debug, console wrapped
+> UC Authorization
 
 ## 安装
 
 ```bash
-$ spm install nd-debug --save
+$ spm install nd-user --save
 ```
 
 ## 使用
 
 ```js
-var debug = require('nd-debug');
-// use debug
+var user = require('nd-user');
+// use user
 ```
